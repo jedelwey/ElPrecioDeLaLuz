@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Precio de la luz</title>
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="js/hammer.min.js"></script>
+    </head>  
+    <body>
+        <div id="cabecera">
+            <img id="logo" src="img/logo.png"/>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#tablaGeneral" id="bgneral" onclick="botongeneral();">General</a></li>
+                <li><a href="#tablaNocturna" id="bnocturna" onclick="botonnocturna();">Nocturna</a></li>
+                <li><a href="#tablaVehiculos" id="bvehiculos" onclick="botonvehiculos();">Vehículos</a></li>
+                <li><a href="#faq" id="bfaq" onclick="botonfaq();">FAQ</a></li>
+            </ul>
+        </div>
+        <div id="cuerpo">
+            <div id="tablaGeneral">
+                <!-- 
+                    Aqui va la tabla general
+                -->
+            </div>
+            <div id="tablaNocturna">
+                <!--  
+                    Aquí va la tabla nocturna
+                -->
+            </div>
+            <div id="tablaVehiculos">
+                <!--  
+                    Aquí va la tabla vehículos
+                -->
+            </div>
+            <div id="faq">
+            <div id="imagen">
+                <img src="./img/iniris.png">
+            </div>
+            <h1><span>El precio de la luz<sup>&copy;</sup></span></h1>
+            <p>Pon esa lavadora que tenias pendiente 1 o 2 horas más tardes cuando el precio es más barato. Ajusta a que hora es mejor darte un baño o ducha si tienes el termo eléctrico. Configura tu lavavajillas para que funcione en las horas más baratas... </p>
+            <p>Si sabes a que hora es más barata la luz y te ajustas a ella puedes ahorrar unos euros a final de mes. Y si lo complementas con un enchufe con temporizador podrás sacarle más partido a tus electrodomésticos.
+            </p>
+            <p>Esta aplicación recoge los datos aportados por <a href="#" onclick="navigator.app.loadUrl('http://www.esios.ree.es/web-publica/',{openExtenal:true});">Red Eléctrica de España</a> donde se pueden consultar los precios de las subastas diarias por cada tramo horario. Las subastas se realizan diariamente a entre las 20 y 21 horas, por lo que a las 21:00 horas tendrán disponible los precios del día siguiente.</p>
+            <p>Los datos que se recogen son los precios de las tarifas correspondientes al <b>Precio Voluntario Pequeño Consumidor (PVPC)</b> que sustituyen a la <b>Tarifa de Último Recurso (TUR)</b>. Estas tarifas son la <b>General</b>, <b>Nocturna</b> y <b>Vehículo Eléctrico</b>.</p>
+            <p>No quiero competir con el resto de aplicaciones en opciones, alarmas, widgets, etc... Simplemente mostrar los datos que la gente quiere saber de una forma, fácil y sencilla de entender para todo el mundo.</p>
+            <p>Si tienes cualquier duda o sugerencia sobre la aplicación no dudes en contactar conmigo por correo, en las reseñas de la app, o en <a href = "#" onclick = "navigator.app.loadUrl('https://twitter.com/jedelwey', { openExternal:true } );">mi twitter personal</a>.</p>
+            <p>&nbsp;</p>
+        </div>
+        </div>
+        <div id="oculto">
+            
+        </div>
+        <div id="log">
+            
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type='application/javascript' src='js/fastclick.js'></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>     
+    </body>
+</html>
