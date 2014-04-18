@@ -8,29 +8,20 @@ var app = {
     onDeviceReady: function () {
         //Llamamos la función de FastClick para todos los elementos que esten en el body
         FastClick.attach(document.body);
+        $(document).ready(function () {
+            //Genero las tablas
+            var fecha = mifecha();
+            //Pido los JSON al servidor
+            loadVehiculos();
+            loadNocturna();
+            loadGeneral();            
+            //Creo la entrada por defecto
+            $("#oculto").append("general");
+            $("#oculto").hide();
+            botongeneral();
+        }); 
     },
 };
-
-$(document).ready(function () {
-    checkConnection();
-    //Genero las tablas
-    var fecha = mifecha();
-    //Creo la entrada por defecto.
-    loadVehiculos();
-    loadNocturna();
-    loadGeneral();
-    //Muestro General
-    $("#tablaGeneral").show();
-    $("#bgneral").css("border-bottom", "2px solid #f8a23b");
-//Oculto el resto
-    $("#tablaNocturna").hide();
-    $("#tablaVehiculos").hide();
-    $("#faq").hide();
-    $("#oculto").append("general");
-    $("#oculto").hide();
-    botongeneral();
- //Fin prueba
-});
 //Pulsar el botón General
 function botongeneral(){
     $("#cuerpo").animate({ scrollTop: 0 }, 1);

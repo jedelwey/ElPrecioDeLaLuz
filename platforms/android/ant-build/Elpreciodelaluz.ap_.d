@@ -22,6 +22,7 @@ c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\i
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\index.html \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\js \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\phonegap.js \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\plugins \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\res \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\spec \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\spec.html \
@@ -33,6 +34,10 @@ c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\j
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\js\hammer.min.js \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\js\index.js \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\js\jquery-2.1.0.min.js \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\Connection.js \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\network.js \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\res\icon \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\res\screen \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\res\icon\android \
