@@ -9,17 +9,26 @@ var app = {
         //Llamamos la función de FastClick para todos los elementos que esten en el body
         FastClick.attach(document.body);
         $(document).ready(function () {
+            //prueba 
+            $("#tablag").hide();
+            $("#tablan").hide();
+            $("#tablav").hide();
+            $("#mediageneral").hide();
+            $("#medianocturna").hide();
+            $("#mediavehiculo").hide();
+
             //Genero las tablas
             var fecha = mifecha();
             //Pido los JSON al servidor
-            loadVehiculos();
+            loadGeneral();
             loadNocturna();
-            loadGeneral();            
+            loadVehiculos();
             //Creo la entrada por defecto
             $("#oculto").append("general");
             $("#oculto").hide();
+            $("#faq").hide();
             botongeneral();
-        }); 
+        });
     },
 };
 //Pulsar el botón General
@@ -34,6 +43,11 @@ function botongeneral(){
     $("#bvehiculos").css("border-bottom", "2px solid #fff");
     $("#bfaq").css("border-bottom", "2px solid #fff");
     $("#oculto").html("general");
+    $("#cargando").show();
+    error = $("#log").html();
+    if(error == "error"){
+        $("#error").show();
+    }
 };
 //Pulsar el botón Nocturna
 function botonnocturna(){
@@ -47,6 +61,11 @@ function botonnocturna(){
     $("#bvehiculos").css("border-bottom", "2px solid #fff");
     $("#bfaq").css("border-bottom", "2px solid #fff");
     $("#oculto").html("nocturna");
+    $("#cargando").show();
+    error = $("#log").html();
+    if(error == "error"){
+        $("#error").show();
+    }
 };
 //Pulsar el botón Vehículos
 function botonvehiculos() {
@@ -60,6 +79,11 @@ function botonvehiculos() {
     $("#bvehiculos").css("border-bottom", "2px solid #f8a23b");
     $("#bfaq").css("border-bottom", "2px solid #fff");
     $("#oculto").html("vehiculos");
+    $("#cargando").show();
+    error = $("#log").html();
+    if(error == "error"){
+        $("#error").show();
+    }
 };
 //Pulsar el botón FAQ
 function botonfaq() {
@@ -73,23 +97,24 @@ function botonfaq() {
     $("#bvehiculos").css("border-bottom", "2px solid #fff");
     $("#bfaq").css("border-bottom", "2px solid #f8a23b");
     $("#oculto").html("faq");
+    $("#cargando").hide();
+    $("#error").hide();
 };
-
 function mifecha() {
 	var meses, diasSemana, hoy, maniana, hora;
     meses = new Array ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
     diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
     hoy = new Date();
-    maniana = hoy.setTime(hoy.getTime() + (24 * 60 * 60 * 1000));
-    maniana = new Date(maniana);
     hora = hoy.getHours();
     if (hora < 21) {
         if (hoy.getMonth() < 10) {
-            fecha = (hoy.getDate() + "/0" + (hoy.getMonth() + 1) + "/" + hoy.getFullYear());
+            fecha = (hoy.getDate()+ "/0" + (hoy.getMonth() + 1) + "/" + hoy.getFullYear());
         } else {
-            fecha = (hoy.getDate() + "/" + (hoy.getMonth() + 1) + "/" + hoy.getFullYear());
+            fecha = (hoy.getDate()+ "/" + (hoy.getMonth() + 1) + "/" + hoy.getFullYear());
         }
     } else {
+        maniana = hoy.setTime(hoy.getTime() + (24 * 60 * 60 * 1000));
+        maniana = new Date(maniana);
 		if (maniana.getMonth() < 10) {
             fecha = (maniana.getDate() + "/0" + (maniana.getMonth() + 1) + "/" + maniana.getFullYear());
         } else {
@@ -99,170 +124,178 @@ function mifecha() {
 };
 //Creo la tabla Tarifa General
 function loadGeneral() {
-    var hora, acum, copaux, copia, reverso, original, i, j, k, orgaux;
-	hora = ["00-01", "01-02", "02-03", "03-04", "04-05", "05-06", "06-07", "07-08", "08-09", "09-10", "10-11", "11-12", "12-13", "13-14", "14-15", "15-16", "16-17", "17-18", "18-19", "19-20", "20-21", "21-22", "22-23", "23-24"];
-    acum = "<h2 id='mediageneral'></h2>";
-    acum = acum + "<table align='center'><thead><th>Hora</th><th>Tarifa General</th></thead><tbody>";
-    for (i = 1; i < 25; i++) {
-        acum = acum + "<tr>";
-        if (i % 2 === 0) {
-            acum = acum + "<td id='Ghora" + i + "' class='thoras par'></td>";
-            acum = acum + "<td class='tgeneral par'  id='general" + i + "'></td>";
-        } else {
-            acum = acum + "<td id='Ghora" + i + "' class='thoras impar'></td>";
-            acum = acum + "<td class='tgeneral impar'id='general" + i + "'></td>";
-        }
-        acum = acum + "</tr>";
-    };
-    acum = acum + "</tbody></table>";
-    $("#tablaGeneral").append(acum);
-    $("#tablaGeneral").hide();
-    //Consigo la hora
-    for (i = 0; i < hora.length; i++) {
-        $("#Ghora" + (i + 1)).append(hora[i]);
-    };
-    //fin hora
-    //consigo la tarifa general
-    $.getJSON("http://www.iniris.es/luz/general", function (general) {
-        $.each(general, function (key, val) {
-            for (i = 0; i < 24; i++) {
-                original = val[i];
-                orgaux = original.substr(2, 6);
-                $("#general" + (i + 1)).html("<div align='center' class='preciohora' id='preciohora" + orgaux + "'>Precio intermedio</div><br><div>" + original + " &euro; / kWh </div>");
-            };
-            for (i = 24; i < 25; i++) {
-                original = val[i];
-                $("#mediageneral").html("Fecha: "+fecha+"<br>Precio medio: "+original+" &euro;");
-            };
-            reverso = val.sort();
-            for (var j = 0; j < 24; j++) {
-                copia = reverso[j];
-                copaux = copia.substr(2, 6);
-                if (j < 8) {
-                    $("#preciohora"+copaux).html("Precio más barato");
-                    $("#preciohora"+copaux).css("background-color", "green");
-                } else{
-                    if (j < 16) {
+//Prueba ajax
+    $.ajax(
+    {
+        type        : "GET",
+        url         : "http://www.iniris.es/luz/general",
+        crossDomain : true,
+        beforeSend  : function()
+        {
+            $("#log").html("");
+            $("#error").hide();
+            $("#cargando").html("<div id='cargando'><div id='imagencargando'><img src='img/loading.gif'/></div><h1>Cargando...<br>Por favor espere</h1></div>");
+            $("#cargando").show();
+            $("#tablag").hide();
+        },
+        complete    : function(){
+            $("#cargando").html("");
+            $("#cargando").hide();
+        },                
+        dataType    : 'json',
+        success     : function(respuestag)
+        {
+            $.each(respuestag, function (key, valg)
+            {
+                for (i = 0; i < 24; i++) 
+                {
+                    originalgeneral = valg[i];
+                    orgauxg = originalgeneral.substr(2, 6);
+                    $("#general" + (i + 1)).html("<div align='center' class='preciohora' id='preciohorag" + orgauxg + "'>Precio intermedio</div><br><div>" + originalgeneral + " &euro; / kWh </div>");
+                };
+                for (i= 24; i < 25; i++){
+                    originalgeneral = valg[i];
+                    $("#mediageneral").html("Fecha: "+fecha+"<br>Precio medio: "+originalgeneral+" &euro;");
+                };
+                reversog = valg.sort();
+                for (var j = 0; j < 24; j++) {
+                    copiag = reversog[j];
+                    copauxg = copiag.substr(2, 6);
+                    if (j < 8) {
+                        $("#preciohorag"+copauxg).html("Precio más barato");
+                        $("#preciohorag"+copauxg).css("background-color", "green");
                     } else{
-                        $("#preciohora"+copaux).html("Precio más caro");
-                        $("#preciohora"+copaux).css("background-color", "red");
+                        if (j < 16) {
+                        } else{
+                            $("#preciohorag"+copauxg).html("Precio más caro");
+                            $("#preciohorag"+copauxg).css("background-color", "red");
+                        };
                     };
                 };
-            };
-        });
+            });
+            $("#tablag").show();
+            $("#mediageneral").show();
+            $("#error").hide();
+        },
+        error       : function(){
+            $("#error").show();
+            $("#log").html("error");
+        }
     });
+// FIN AJAX
 };
 //Creo la tabla tarifa nocturna.
 function loadNocturna() {
-	var hora, acum, copaux, copia, reverso, original, i, j, k, orgaux;
-    hora = ["00-01", "01-02", "02-03", "03-04", "04-05", "05-06", "06-07", "07-08", "08-09", "09-10", "10-11", "11-12", "12-13", "13-14", "14-15", "15-16", "16-17", "17-18", "18-19", "19-20", "20-21", "21-22", "22-23", "23-24"];
-    acum = "<h2 id='medianocturna'></h2>";
-    acum = acum + "<table align='center'><thead><th>Hora</th><th>Tarifa Nocturna</th></thead><tbody>";
-    for (i = 1; i < 25; i++) {
-        acum = acum + "<tr>";
-        if (i % 2 === 0) {
-            acum = acum + "<td id='Thora" + i + "' class='thoras par'></td>";
-            acum = acum + "<td class='tnocturna par' id='nocturna" + i + "' ></td>";
-        } else {
-            acum = acum + "<td id='Thora" + i + "' class='thoras impar'></td>";
-            acum = acum + "<td class='tnocturna impar' id='nocturna" + i + "' ></td>";
-        }
-        acum = acum + "</tr>";
-    };
-    acum = acum + "</tbody></table>";
-    $("#tablaNocturna").append(acum);
-    $("#tablaNocturna").hide();
-    //Consigo la hora
-    for (i = 0; i < hora.length; i++) {
-        $("#Thora" + (i + 1)).append(hora[i]);
-    };
-    //fin hora
-    //consigo la tarifa nocturna
-    $.getJSON("http://www.iniris.es/luz/nocturna", function(general) {
-        $.each(general, function (key, val){   
-            for (i = 0; i < 24; i++) {
-                original = val[i];
-                orgaux = original.substr(2, 6);
-                $("#nocturna" + (i + 1)).html("<div align='center' class='preciohora' id='preciohora" + orgaux + "'>Precio intermedio</div><br><div>" + original + " &euro; / kWh </div>");
-            };
-            for (i = 24; i < 25; i++) {
-                original = val[i];
-                $("#medianocturna").html("Fecha: "+fecha+"<br>Precio medio: "+original+" &euro;");
-            };
-            reverso = val.sort();
-            for (var j = 0; j < 24; j++) {
-                copia = reverso[j];
-                copaux = copia.substr(2, 6);
-                if (j < 8) {
-                    $("#preciohora"+copaux).html("Precio más barato");
-                    $("#preciohora"+copaux).css("background-color", "green");
-                } else{
-                    if (j < 16) {
+    $.ajax(
+    {
+        type        : "GET",
+        url         : "http://www.iniris.es/luz/nocturna",
+        crossDomain : true,
+        beforeSend  : function(){
+            $("#log").html("");
+            $("#error").hide();
+            $("#cargando").html("<div id='cargando'><div id='imagencargando'><img src='img/loading.gif'/></div><h1>Cargando...<br>Por favor espere</h1></div>");
+            $("#cargando").show();
+        },
+        complete    : function(){$("#cargando").html("");$("#cargando").hide();},                
+        dataType    : 'json',
+        success     : function(respuestan)
+        {
+            $.each(respuestan, function (key, valn)
+            {
+                for (i = 0; i < 24; i++) 
+                {
+                    originalnocturna = valn[i];
+                    noct = originalnocturna.substr(2, 6);
+                    $("#nocturna" + (i + 1)).html("<div align='center' class='preciohora' id='preciohoran" + noct + "'>Precio intermedio</div><br><div>" + originalnocturna + " &euro; / kWh </div>");
+                };
+                for (i= 24; i < 25; i++){
+                    originalnocturna = valn[i];
+                    $("#medianocturna").html("Fecha: "+fecha+"<br>Precio medio: "+originalnocturna+" &euro;");
+                };
+                reverson = valn.sort();
+                for (var j = 0; j < 24; j++) {
+                    vueltan = reverson[j];
+                    noctaux = vueltan.substr(2, 6);
+                    if (j < 8) {
+                        $("#preciohoran"+noctaux).html("Precio más barato");
+                        $("#preciohoran"+noctaux).css("background-color", "green");
                     } else{
-                        $("#preciohora"+copaux).html("Precio más caro");
-                        $("#preciohora"+copaux).css("background-color", "red");
+                        if (j < 16) {
+                        } else{
+                            $("#preciohoran"+noctaux).html("Precio más caro");
+                            $("#preciohoran"+noctaux).css("background-color", "red");
+                        };
                     };
                 };
-            };
-        });
+            });
+            $("#medianocturna").show();
+            $("#tablan").show();
+            $("#error").hide();
+        },
+        error       : function(){
+            $("#error").show();
+            $("#log").html("error");
+        }
     });
+// FIN AJAX
 };
 //Creo la tabla Vehículos
 function loadVehiculos() {
-    var hora, acum, copaux, copia, reverso, original, i, j, k, orgaux;
-	hora = ["00-01", "01-02", "02-03", "03-04", "04-05", "05-06", "06-07", "07-08", "08-09", "09-10", "10-11", "11-12", "12-13", "13-14", "14-15", "15-16", "16-17", "17-18", "18-19", "19-20", "20-21", "21-22", "22-23", "23-24"];
-    acum = "<h2 id='mediavehiculo'></h2>";
-    acum = acum + "<table align='center'><thead><th>Hora</th><th>Tarifa Vehículos Eléctricos</th></thead><tbody>";
-    for (i = 1; i < 25; i++) {
-        acum = acum + "<tr>";
-        if (i % 2 === 0) {    
-            acum = acum + "<td id='Vhora" + i + "' class='thoras par'></td>";
-            acum = acum + "<td class='tvehiculo par' id='vehiculo" + i + "'></td>";
-        } else {
-            acum = acum + "<td id='Vhora" + i + "' class='thoras impar'></td>";
-            acum = acum + "<td class='tvehiculo impar' id='vehiculo" + i + "'></td>";
-        }
-        acum = acum + "</tr>";
-    };
-    acum = acum + "</tbody></table>";
-    $("#tablaVehiculos").append(acum);
-    $("#tablaVehiculos").hide();
-    //Consigo la hora
-    for (i = 0; i < hora.length; i++) {
-        $("#Vhora" + ( i + 1)).append(hora[i]);
-    };
-    //fin hora
-    //consigo la tarifa de vehiculo electrico
-    $.getJSON("http://www.iniris.es/luz/vehiculo", function(general) {
-        $.each(general, function (key, val){   
-            for (i = 0; i < 24; i++) {
-                original = val[i];
-                orgaux = original.substr(2, 6);
-                $("#vehiculo" + (i + 1)).html("<div align='center' class='preciohora' id='preciohora" + orgaux + "'>Precio intermedio</div><br><div>" + original + " &euro; / kWh </div>");
-            };
-            for (i = 24; i < 25; i++) {
-                original = val[i];
-                $("#mediavehiculo").html("Fecha: "+fecha+"<br>Precio medio: "+original+" &euro;");
-            };
-            reverso = val.sort();
-            for (var j = 0; j < 24; j++) {
-                copia = reverso[j];
-                copaux = copia.substr(2, 6);
-                if (j < 8) {
-                    $("#preciohora"+copaux).html("Precio más barato");
-                    $("#preciohora"+copaux).css("background-color", "green");
-                } else{
-                    if (j < 16) {
+    $.ajax(
+    {
+        type        : "GET",
+        url         : "http://www.iniris.es/luz/vehiculo",
+        crossDomain : true,
+        beforeSend  : function(){
+            $("#log").html("");
+            $("#error").hide();
+            $("#cargando").html("<div id='cargando'><div id='imagencargando'><img src='img/loading.gif'/></div><h1>Cargando...<br>Por favor espere</h1></div>");
+            $("#cargando").show();
+        },
+        complete    : function(){$("#cargando").html("");$("#cargando").hide();},                
+        dataType    : 'json',
+        success     : function(response)
+        {
+            $.each(response, function (key, val)
+            {
+                for (i = 0; i < 24; i++) 
+                {
+                    original = val[i];
+                    orgaux = original.substr(2, 6);
+                    $("#vehiculo" + (i + 1)).html("<div align='center' class='preciohora' id='preciohorav" + orgaux + "'>Precio intermedio</div><br><div>" + original + " &euro; / kWh </div>");
+                };
+                for (i= 24; i < 25; i++){
+                    original = val[i];
+                    $("#mediavehiculo").html("Fecha: "+fecha+"<br>Precio medio: "+original+" &euro;");
+                };
+                reverso = val.sort();
+                for (var j = 0; j < 24; j++) {
+                    copia = reverso[j];
+                    copaux = copia.substr(2, 6);
+                    if (j < 8) {
+                        $("#preciohorav"+copaux).html("Precio más barato");
+                        $("#preciohorav"+copaux).css("background-color", "green");
                     } else{
-                        $("#preciohora"+copaux).html("Precio más caro");
-                        $("#preciohora"+copaux).css("background-color", "red");
+                        if (j < 16) {
+                        } else{
+                            $("#preciohorav"+copaux).html("Precio más caro");
+                            $("#preciohorav"+copaux).css("background-color", "red");
+                        };
                     };
                 };
-            };
-        });
+            });
+            $("#mediavehiculo").show();
+            $("#tablav").show();
+            $("#error").hide();
+        },
+        error       : function(){
+            $("#error").show();
+            $("#log").html("error");
+        }
     });
+// FIN AJAX
 };
-
 //*************************************************//
 //        IMPLEMENTAR GESTOS TACTILES CON HAMMER   //
 //*************************************************//

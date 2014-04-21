@@ -211,3 +211,32 @@ table{
 	margin-left: 10px;
 	margin-right: 10px;
 }
+#cargando{
+	text-align: center;
+	margin-top: 5%;
+}
+#cargando img{
+	width: 50%;
+}
+#error{
+	top: 10px;
+	bottom:0px;
+	position:absolute;
+	width: 90%;
+	text-align: center;
+	margin-left: 5%;
+}
+#error h2{
+	background-color: grey;
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px; 
+	border-radius: 20px;
+	-moz-box-shadow: 5px 5px 2px #888;
+	-webkit-box-shadow: 5px 15px 2px #888;
+	box-shadow: 5px 5px 2px #888;
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}

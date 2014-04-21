@@ -29,6 +29,7 @@ c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\s
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\css\index.css \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\img\imagen.png \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\img\iniris.png \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\img\loading.gif \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\img\logo.png \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\js\fastclick.js \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\js\hammer.min.js \
