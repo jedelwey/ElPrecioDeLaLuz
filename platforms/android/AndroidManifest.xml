@@ -1,57 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-       Licensed to the Apache Software Foundation (ASF) under one
-       or more contributor license agreements.  See the NOTICE file
-       distributed with this work for additional information
-       regarding copyright ownership.  The ASF licenses this file
-       to you under the Apache License, Version 2.0 (the
-       "License"); you may not use this file except in compliance
-       with the License.  You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-       Unless required by applicable law or agreed to in writing,
-       software distributed under the License is distributed on an
-       "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-       KIND, either express or implied.  See the License for the
-       specific language governing permissions and limitations
-       under the License.
--->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:windowSoftInputMode="adjustPan"
-      package="com.iniris.preciodelaluz" android:versionName="1.1" android:versionCode="1" android:hardwareAccelerated="true">
-    <supports-screens
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:smallScreens="true"
-        android:xlargeScreens="true"
-        android:resizeable="true"
-        android:anyDensity="true"
-        />
-
+<?xml version='1.0' encoding='utf-8'?>
+<manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="1.1" android:windowSoftInputMode="adjustPan" package="com.iniris.preciodelaluz" xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
     <uses-permission android:name="android.permission.INTERNET" />
-	<!-- Los permisos Internet y access_network_state es necesario también para G analytics -->
-	<!-- Añadir para publicidad phonegap -->
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
-	<!-- Fin añadir para publicidad phonegap -->
-    
-    <application android:icon="@drawable/icono" android:label="@string/app_name"
-        android:hardwareAccelerated="true" android:logo="@drawable/icono">
-        
-        <activity android:name="Elpreciodelaluz" android:label="@string/app_name"
-                android:theme="@android:style/Theme.Black.NoTitleBar"
-                android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"  android:screenOrientation="portrait">
-                
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application android:hardwareAccelerated="true" android:icon="@drawable/icono" android:label="@string/app_name" android:logo="@drawable/icono">
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/app_name" android:name="Elpreciodelaluz" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Añadir para publicidad phonegap -->
-        	<activity android:name="com.google.ads.AdActivity"
-  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
-        <!-- Fin añadir para publicidad phonegap -->
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:name="com.google.ads.AdActivity" />
     </application>
-
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19"/>
-</manifest> 
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="19" />
+</manifest>

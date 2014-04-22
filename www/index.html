@@ -21,42 +21,367 @@
             </ul>
         </div>
         <div id="cuerpo">
-            <div id="tablaGeneral">
-                <!-- 
-                    Aqui va la tabla general
-                -->
+            <div id="cargando">
+                <div id="imagencargando">
+                    <img src='img/loading.gif'/>
+                </div>
+                <h1>Cargando...<br>Por favor espere</h1>
             </div>
-            <div id="tablaNocturna">
-                <!--  
-                    Aquí va la tabla nocturna
-                -->
+            <div id="tablaGeneral" hidden>
+                <h2 class="media" id='mediageneral' hidden></h2>
+                <table align='center' id="tablag" hidden>
+                    <thead>
+                        <th>Hora</th>
+                        <th>Tarifa General</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="thoras impar">00-01</td>
+                            <td id="general1" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">01-02</td>
+                            <td id="general2" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">02-03</td>
+                            <td id="general3" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">03-04</td>
+                            <td id="general4" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">04-05</td>
+                            <td id="general5" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">05-06</td>
+                            <td id="general6" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">06-07</td>
+                            <td id="general7" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">07-08</td>
+                            <td id="general8" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">08-09</td>
+                            <td id="general9" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">09-10</td>
+                            <td id="general10" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">10-11</td>
+                            <td id="general11" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">11-12</td>
+                            <td id="general12" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">12-13</td>
+                            <td id="general13" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">13-14</td>
+                            <td id="general14" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">14-15</td>
+                            <td id="general15" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">15-16</td>
+                            <td id="general16" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">16-17</td>
+                            <td id="general17" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">17-18</td>
+                            <td id="general18" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">18-19</td>
+                            <td id="general19" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">19-20</td>
+                            <td id="general20" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">20-21</td>
+                            <td id="general21" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">21-22</td>
+                            <td id="general22" class="tgeneral par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">22-23</td>
+                            <td id="general23" class="tgeneral impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">23-24</td>
+                            <td id="general24" class="tgeneral par"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div id="tablaVehiculos">
-                <!--  
-                    Aquí va la tabla vehículos
-                -->
+            <div id="tablaNocturna" hidden>
+                <h2 class="media" id='medianocturna' hidden></h2>
+                <table align='center' id="tablan" hidden>
+                    <thead>
+                        <th>Hora</th>
+                        <th>Tarifa Nocturna</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="thoras impar">00-01</td>
+                            <td id="nocturna1" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">01-02</td>
+                            <td id="nocturna2" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">02-03</td>
+                            <td id="nocturna3" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">03-04</td>
+                            <td id="nocturna4" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">04-05</td>
+                            <td id="nocturna5" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">05-06</td>
+                            <td id="nocturna6" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">06-07</td>
+                            <td id="nocturna7" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">07-08</td>
+                            <td id="nocturna8" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">08-09</td>
+                            <td id="nocturna9" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">09-10</td>
+                            <td id="nocturna10" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">10-11</td>
+                            <td id="nocturna11" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">11-12</td>
+                            <td id="nocturna12" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">12-13</td>
+                            <td id="nocturna13" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">13-14</td>
+                            <td id="nocturna14" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">14-15</td>
+                            <td id="nocturna15" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">15-16</td>
+                            <td id="nocturna16" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">16-17</td>
+                            <td id="nocturna17" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">17-18</td>
+                            <td id="nocturna18" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">18-19</td>
+                            <td id="nocturna19" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">19-20</td>
+                            <td id="nocturna20" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">20-21</td>
+                            <td id="nocturna21" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">21-22</td>
+                            <td id="nocturna22" class="tnocturna par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">22-23</td>
+                            <td id="nocturna23" class="tnocturna impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">23-24</td>
+                            <td id="nocturna24" class="tnocturna par"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div id="faq">
-            <div id="imagen">
-                <img src="./img/iniris.png">
+            <div id="tablaVehiculos" hidden>
+
+                <h2 class="media" id='mediavehiculo' hidden></h2>
+                <table align='center' id="tablav" hidden>
+                    <thead>
+                        <th>Hora</th>
+                        <th>Tarifa vehiculo</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="thoras impar">00-01</td>
+                            <td id="vehiculo1" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">01-02</td>
+                            <td id="vehiculo2" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">02-03</td>
+                            <td id="vehiculo3" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">03-04</td>
+                            <td id="vehiculo4" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">04-05</td>
+                            <td id="vehiculo5" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">05-06</td>
+                            <td id="vehiculo6" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">06-07</td>
+                            <td id="vehiculo7" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td class="thoras par">07-08</td>
+                            <td id="vehiculo8" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td class="thoras impar">08-09</td>
+                            <td id="vehiculo9" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">09-10</td>
+                            <td id="vehiculo10" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">10-11</td>
+                            <td id="vehiculo11" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">11-12</td>
+                            <td id="vehiculo12" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">12-13</td>
+                            <td id="vehiculo13" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">13-14</td>
+                            <td id="vehiculo14" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">14-15</td>
+                            <td id="vehiculo15" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">15-16</td>
+                            <td id="vehiculo16" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">16-17</td>
+                            <td id="vehiculo17" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">17-18</td>
+                            <td id="vehiculo18" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">18-19</td>
+                            <td id="vehiculo19" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">19-20</td>
+                            <td id="vehiculo20" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">20-21</td>
+                            <td id="vehiculo21" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">21-22</td>
+                            <td id="vehiculo22" class="tvehiculo par"></td>
+                        </tr>
+                        <tr>
+                            <td  class="thoras impar">22-23</td>
+                            <td id="vehiculo23" class="tvehiculo impar"></td>            
+                        </tr>
+                        <tr>
+                            <td  class="thoras par">23-24</td>
+                            <td id="vehiculo24" class="tvehiculo par"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <h1><span>El precio de la luz<sup>&copy;</sup></span></h1>
-            <p>Pon esa lavadora que tenias pendiente 1 o 2 horas más tardes cuando el precio es más barato. Ajusta a que hora es mejor darte un baño o ducha si tienes el termo eléctrico. Configura tu lavavajillas para que funcione en las horas más baratas... </p>
-            <p>Si sabes a que hora es más barata la luz y te ajustas a ella puedes ahorrar unos euros a final de mes. Y si lo complementas con un enchufe con temporizador podrás sacarle más partido a tus electrodomésticos.
-            </p>
-            <p>Esta aplicación recoge los datos aportados por <a href="#" onclick="navigator.app.loadUrl('http://www.esios.ree.es/web-publica/',{openExtenal:true});">Red Eléctrica de España</a> donde se pueden consultar los precios de las subastas diarias por cada tramo horario. Las subastas se realizan diariamente a entre las 20 y 21 horas, por lo que a las 21:00 horas tendrán disponible los precios del día siguiente.</p>
-            <p>Los datos que se recogen son los precios de las tarifas correspondientes al <b>Precio Voluntario Pequeño Consumidor (PVPC)</b> que sustituyen a la <b>Tarifa de Último Recurso (TUR)</b>. Estas tarifas son la <b>General</b>, <b>Nocturna</b> y <b>Vehículo Eléctrico</b>.</p>
-            <p>No quiero competir con el resto de aplicaciones en opciones, alarmas, widgets, etc... Simplemente mostrar los datos que la gente quiere saber de una forma, fácil y sencilla de entender para todo el mundo.</p>
-            <p>Si tienes cualquier duda o sugerencia sobre la aplicación no dudes en contactar conmigo por correo, en las reseñas de la app, o en <a href = "#" onclick = "navigator.app.loadUrl('https://twitter.com/jedelwey', { openExternal:true } );">mi twitter personal</a>.</p>
-            <p>&nbsp;</p>
+            <div id="faq" hidden>
+                <div id="imagen">
+                    <img src="./img/iniris.png">
+                </div>
+                <h1><span>El precio de la luz<sup>&copy;</sup></span></h1>
+                <p>
+				Pon esa lavadora que tenias pendiente 1 o 2 horas más tardes cuando el precio es más barato. Ajusta a que hora es mejor darte un baño o ducha si tienes el termo eléctrico. Configura tu lavavajillas para que funcione en las horas más baratas... 
+				</p>
+                <p>
+				Si sabes a que hora es más barata la luz y te ajustas a ella puedes ahorrar unos euros a final de mes. Y si lo complementas con un enchufe con temporizador podrás sacarle más partido a tus electrodomésticos.
+                </p>
+                <p>
+				Esta aplicación recoge los datos aportados por <a href="#" onclick="navigator.app.loadUrl('http://www.esios.ree.es/web-publica/',{openExtenal:true});">Red Eléctrica de España</a> donde se pueden consultar los precios de las subastas diarias por cada tramo horario. Las subastas se realizan diariamente a entre las 20 y 21 horas, por lo que a las 21:00 horas tendrán disponible los precios del día siguiente.
+				</p>
+                <p>
+				Los datos que se recogen son los precios de las tarifas correspondientes al <b>Precio Voluntario Pequeño Consumidor (PVPC)</b> que sustituyen a la <b>Tarifa de Último Recurso (TUR)</b>. Estas tarifas son la <b>General</b>, <b>Nocturna</b> y <b>Vehículo Eléctrico</b>.
+				</p>
+                <p>
+				No quiero competir con el resto de aplicaciones en opciones, alarmas, widgets, etc... Simplemente mostrar los datos que la gente quiere saber de una forma, fácil y sencilla de entender para todo el mundo.
+				</p>
+                <p>
+				Si tienes cualquier duda o sugerencia sobre la aplicación no dudes en contactar conmigo por correo, en las reseñas de la app, o en <a href = "#" onclick = "navigator.app.loadUrl('https://twitter.com/jedelwey', { openExternal:true } );">mi twitter personal</a>.
+				</p>
+                <p>&nbsp;</p>
+            </div>
+            <div id="error" align="center" hidden>
+                <h2>No se han podido cargar los datos</h2><br><br>
+                <input type="button" id="recargar" 
+                onclick="javascript:loadGeneral();loadNocturna();loadVehiculos();" value="Volver a cargar" />
+            </div>
         </div>
-        </div>
-        <div id="oculto">
-            
-        </div>
-        <div id="log">
-            
-        </div>
+        <div id="oculto" hidden></div>
+        <div id="log" hidden></div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type='application/javascript' src='js/fastclick.js'></script>
         <script type="text/javascript" src="js/index.js"></script>
