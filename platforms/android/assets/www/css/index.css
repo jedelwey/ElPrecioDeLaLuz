@@ -227,7 +227,11 @@ table{
 	margin-left: 5%;
 }
 #error h2{
+<<<<<<< HEAD
 	background-color: #ccc;
+=======
+	background-color: grey;
+>>>>>>> f55958bd179ae273b9c66137b0474e112b2498bc
 	-moz-border-radius: 20px; 
 	-webkit-border-radius: 20px; 
 	border-radius: 20px;
