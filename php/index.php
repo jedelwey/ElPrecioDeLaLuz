@@ -35,22 +35,20 @@
 	function general(){
 		$page = micurl();
 		$general = array(); //Precios de la tarifa general 
-		$contador = 0;
+		$contador = 1;
 		$i=0;
-		while ($i < strlen($page) && contador < 73) {
+		while ($i < strlen($page)) {
 			if ($page[$i] == ",") {
 				$numero = $page[($i-1)].$page[$i].$page[($i+1)].$page[($i+2)].$page[($i+3)].$page[($i+4)].$page[($i+5)];
 				//El precio es el tocho largo de arriba
 				$contador++; // Sumo el contador
-				if($contador%3 == 0){} //Si es divisible entre 3 es de la Tarifa de vehículos eléctricos
-				else
+				
+				if($contador==2 || $contador==5 || $contador==8 || $contador==11 || $contador==14 || $contador==17 || $contador==20 || $contador==23 || $contador==26 || $contador==29 || $contador==32 || $contador==35 || $contador==38 || $contador==41 || $contador==44
+              || $contador==47 || $contador==50 || $contador==53 || $contador==56 || $contador==59 || $contador==62 || $contador==65 || $contador==68 || $contador==71 || $contador==74)	
 				{
-					if ($contador%2 == 0) {} // Si es divisible entre 2 es de la tarifa nocturna
-					else{
-						array_push($general, $numero);//Es de la tarifa General.
-					} 
+					array_push($general, $numero);//Es de la tarifa General.
 				}
-			}
+			}	
 			$i++;
 		}
 		echo json_encode(array('general' => $general));
@@ -61,19 +59,17 @@
 	function nocturna(){
 		$page = micurl();
 		$nocturna = array(); //Precios de la tarifa general 
-		$contador = 0;
+		$contador = 1;
 		$i=0;
-		while ($i < strlen($page) && contador < 73) {
+		while ($i < strlen($page)) {
 			if ($page[$i] == ",") {
 				$numero = $page[($i-1)].$page[$i].$page[($i+1)].$page[($i+2)].$page[($i+3)].$page[($i+4)].$page[($i+5)];
 				//El precio es el tocho largo de arriba
 				$contador++; // Sumo el contador
-				if($contador%3 == 0){} //Si es divisible entre 3 es de la Tarifa de vehículos eléctricos
-				else
-				{
-					if ($contador%2 == 0) {
-						array_push($nocturna, $numero);//Es de la tarifa General.
-					} 
+				if($contador==3 || $contador==6 || $contador==9 || $contador==12 || $contador==15 || $contador==18 || $contador==21 || $contador==24 || $contador==27 || $contador==30 || $contador==33 || $contador==36 || $contador==39 || $contador==42 || $contador==45
+              || $contador==48 || $contador==51 || $contador==54 || $contador==57 || $contador==60 || $contador==63 || $contador==66 || $contador==69 || $contador==72 || $contador==75)	
+              	{ //Si es divisible entre 3 es de la Tarifa de vehículos eléctricos
+					array_push($nocturna, $numero);//Es de la tarifa General.
 				}
 			}
 			$i++;
@@ -86,14 +82,16 @@
 	function vehiculo(){
 		$page = micurl();
 		$vehiculo = array(); //Precios de la tarifa general 
-		$contador = 0;
+		$contador = 1;
 		$i=0;
-		while ($i < strlen($page) && contador < 73) {
+		while ($i < strlen($page)) {
 			if ($page[$i] == ",") {
 				$numero = $page[($i-1)].$page[$i].$page[($i+1)].$page[($i+2)].$page[($i+3)].$page[($i+4)].$page[($i+5)];
 				//El precio es el tocho largo de arriba
 				$contador++; // Sumo el contador
-				if($contador%3 == 0){
+				if( $contador==1 || $contador==4 || $contador==7 || $contador==10 || $contador==13 || $contador==16 || $contador==19 || $contador==22 || $contador==25 || $contador==28 || $contador==31 || $contador==34 || $contador==37 || $contador==40 || $contador==43
+              			  || $contador==46 || $contador== 49 || $contador==52 || $contador==55 || $contador==58 || $contador==61 || $contador==64 || $contador==67 || $contador==70 || $contador==73 || $contador==76)
+				{
 					array_push($vehiculo, $numero);//Es de la tarifa General.
 				} //Si es divisible entre 3 es de la Tarifa de vehículos eléctricos					
 			}
