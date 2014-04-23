@@ -10,5 +10,5 @@ c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\ant-build\cl
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\ant-build\classes\org\apache\cordova\networkinformation\NetworkManager$1.class \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\ant-build\classes\org\apache\cordova\networkinformation\NetworkManager.class \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\ant-build\dexedLibs\classes-1607a5ae97962fb124c2c207d8e38e2f.jar \
-c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\ant-build\dexedLibs\libGoogleAnalyticsServices-c533d62a16e5657f1ec81ddfdc74d0f5.jar \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\ant-build\dexedLibs\android-support-v4-bd7d549774665cc4610708537fd6a62c.jar \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\ant-build\dexedLibs\GoogleAdMobAdsSdk-6.4.1-4f62ed8bd3fb9b61e4684b21a20538da.jar \

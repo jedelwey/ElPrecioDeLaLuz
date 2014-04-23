@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.iniris.preciodelaluz"
-        version   = "1.0.3">
+        version   = "1.2.0">
 
     <name>El precio de la luz</name>
 
@@ -13,7 +13,7 @@
     </description>
 
     <author href="https://twitter.com/Jedelwey" email="jedelweybusiness@gmail.com">
-        José David Durán Martos - Iniris Studio
+        José David Durán Martos
     </author>
 
     <!--
@@ -24,6 +24,9 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
+    <!-- <feature name="GAPlugin" >
+        <param name="android-package" value="com.adobe.plugins.GAPlugin"/>
+    </feature> -->
 
     <!--
         If you do not want any permissions to be added to your app, add the

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.iniris.preciodelaluz" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.iniris.preciodelaluz" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
@@ -9,7 +9,7 @@
        Consulta el precio de la luz. Obten todos los datos de la última subasta diaria. 
     </description>
     <author email="jedelweybusiness@gmail.com" href="https://twitter.com/Jedelwey">
-        José David Durán Martos - Iniris Studio
+        José David Durán Martos
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
     <feature name="NetworkStatus">

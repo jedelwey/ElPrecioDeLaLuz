@@ -24,7 +24,6 @@ import org.apache.cordova.*;
 //Añadido para mete publicidad phonegap
 import com.google.ads.*;
 import android.widget.LinearLayout;
-import com.google.analytics.tracking.android.EasyTracker;
 
 public class Elpreciodelaluz extends CordovaActivity 
 {
@@ -47,25 +46,7 @@ public class Elpreciodelaluz extends CordovaActivity
         LinearLayout layout = super.root;
         layout.addView(adView);
         AdRequest request = new AdRequest();
-        request.setTesting(false);
         adView.loadAd(request);
         //Fin meter publicidad phonegap
     }
-    /*************************************************** 
-     ***  Añadir estos métodos para Google Analytics ***
-     ***************************************************/
-    @Override
-    protected void onStart() {
-        super.onStart();
-        EasyTracker.getInstance(this).activityStart(this);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        EasyTracker.getInstance(this).activityStop(this);
-    }
-    /********************************************************* 
-     *** FIN de añadir estos métodos para Google Analytics ***
-     *********************************************************/
 }

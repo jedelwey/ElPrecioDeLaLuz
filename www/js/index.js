@@ -18,6 +18,9 @@ var app = {
             $("#mediageneral").hide();
             $("#mediavehiculo").hide();
 
+            $("#tablaGeneral").hide();
+            $("#tablaNocturna").hide();
+            $("#tablaVehiculos").hide();
             //Genero las tablas
             var fecha = mifecha();
             //Pido los JSON al servidor
@@ -55,8 +58,8 @@ function botonnocturna(){
     $("#cuerpo").animate({ scrollTop: 0 }, 1);
     $("#tablaGeneral").hide();
     $("#tablaNocturna").show();
-    $("#tablan").show();
-    $("#medianocturna").show();
+    // $("#tablan").show();
+    // $("#medianocturna").show();
     $("#tablaVehiculos").hide();
     $("#faq").hide();
     $("#bgneral").css("border-bottom", "2px solid #fff");
@@ -306,7 +309,6 @@ function loadVehiculos() {
                     };
                 };
             });
-            $("#tablaNocturna").show();
             $("#mediavehiculo").show();
             $("#tablav").show();
             $("#error").hide();

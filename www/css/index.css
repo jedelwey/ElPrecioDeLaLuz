@@ -43,31 +43,40 @@ h1{
 	height:48px;
 	width:100%;
 	background: #000;
+	text-align: center;
 }
 
 #nav ul{
-	margin-top:0px;
-	padding:0px;
-	list-style:none;
-	display:block;
-	font-size:15px;
+	display: inline-blockck;
+	text-align: center;
 }
 
 #nav ul li{
-	float:left;
-	line-height:48px;
-	text-align:left;
-	vertical-align:middle;
+	text-decoration: none;
 	color:#eee;
-	padding-left: 10px;
-	padding-right: 10px;
+	display: inline-block;
+	text-align: center;
+}
+#nav ul li:first-child{
+	margin-right: 10%;
+	margin-left: -10%;
+}
+#nav ul li:nth-child(2){
+	margin-right: 10%;
+}
+#nav ul li:nth-child(3){
+	margin-right: 10%;
+}
+#nav ul li:nth-child(4){
+	margin-right: 10%;
 }
 #nav ul li a{
-	text-align: left;
+	text-align: center;
 	color:#eee;
 	text-decoration: none;
 	border-bottom: 2px solid #fff;
 	text-transform:uppercase;
+
 }
 #cuerpo{
 	top: 97px;
@@ -207,10 +216,7 @@ h2{
 	-webkit-box-shadow: 5px 15px 2px #888;
 	box-shadow: 5px 5px 2px #888;	
 }
-table{
-	margin-left: 10px;
-	margin-right: 10px;
-}
+
 #cargando{
 	text-align: center;
 	margin-top: 5%;
@@ -239,4 +245,20 @@ table{
 	padding-right: 5%;
 	padding-top: 3%;
 	padding-bottom: 3%;
+}
+input{
+
+    //height:25px; 
+    //width: 275px; 
+	border: solid 1px #E5E5E5; 
+	outline: 0; 
+	font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+	background: #FFFFFF left top repeat-x; 
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
