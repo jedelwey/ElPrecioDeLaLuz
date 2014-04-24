@@ -17,6 +17,7 @@ c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\_wher
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\cordova.js \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\cordova_plugins.js \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\css \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\icono.png \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\img \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\index.html \
@@ -27,6 +28,17 @@ c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\r
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\spec \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\spec.html \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\css\index.css \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeue.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueBold.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueBoldItalic.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueCondensedBlack.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueCondensedBold.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueItalic.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueLight.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueLightItalic.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueMedium.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueUltraLight.ttf \
+c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\fuentes\HelveticaNeueUltraLightItalic.ttf \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\img\imagen.png \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\img\iniris.png \
 c:\Users\Usuario\Documents\GitHub\ElPrecioDeLaLuz\platforms\android\assets\www\img\loading.gif \
