@@ -19,11 +19,19 @@
 
 package com.iniris.preciodelaluz;
 
+import org.apache.cordova.Config;
+import org.apache.cordova.CordovaActivity;
+
 import android.os.Bundle;
-import org.apache.cordova.*;
-//Añadido para mete publicidad phonegap
-import com.google.ads.*;
 import android.widget.LinearLayout;
+
+import com.google.ads.AdRequest;
+import com.google.ads.AdSize;
+import com.google.ads.AdView;
+//Añadido para mete publicidad phonegap
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.Fields;
+import com.google.analytics.tracking.android.MapBuilder;
 
 public class Elpreciodelaluz extends CordovaActivity 
 {
@@ -48,5 +56,11 @@ public class Elpreciodelaluz extends CordovaActivity
         AdRequest request = new AdRequest();
         adView.loadAd(request);
         //Fin meter publicidad phonegap
+        
+      //Google Analytics
+      		EasyTracker.getInstance(this).activityStart(this);
+      		EasyTracker tracker = EasyTracker.getInstance(super.getActivity());
+      		tracker.set(Fields.SCREEN_NAME, "Home");
+    		tracker.send(MapBuilder.createAppView().build());
     }
 }

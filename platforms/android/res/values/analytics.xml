@@ -9,4 +9,8 @@
 
   <!--Enable automatic exception tracking-->
   <bool name="ga_reportUncaughtExceptions">true</bool>
+  
+    <integer name="ga_dispatchPeriod">3</integer>
+  <string name="ga_appName">El Precio de la luz</string>
+  <string name="ga_appVersion">1.3</string>  
 </resources>
