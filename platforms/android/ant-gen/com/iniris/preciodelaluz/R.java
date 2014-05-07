@@ -21,8 +21,13 @@ public final class R {
     public static final class drawable {
         public static final int icono=0x7f020000;
     }
+    public static final class integer {
+        public static final int ga_dispatchPeriod=0x7f060000;
+    }
     public static final class string {
-        public static final int app_name=0x7f040001;
+        public static final int app_name=0x7f040003;
+        public static final int ga_appName=0x7f040001;
+        public static final int ga_appVersion=0x7f040002;
         /** Replace placeholder ID with your tracking ID
          */
         public static final int ga_trackingId=0x7f040000;

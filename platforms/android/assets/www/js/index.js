@@ -323,35 +323,74 @@ function loadVehiculos() {
 //*************************************************//
 //        IMPLEMENTAR GESTOS TACTILES CON HAMMER   //
 //*************************************************//
-element = document.getElementById('cuerpo');
+// element = document.getElementById('cuerpo');
            
-hammertime = Hammer(element).on("dragleft", function(event) {
-    contador = $("#oculto").html();
-    if(contador == "general"){
-        botonnocturna();
-    }
-    if(contador == "nocturna"){
-        botonvehiculos();
-    }
-    if(contador == "vehiculos"){
-        botonfaq();
-    }
-    if(contador == "faq"){
+// hammertime = Hammer(element).on("dragleft", function(event) {
+//     contador = $("#oculto").html();
+//     if(contador == "general"){
+//         botonnocturna();
+//     }
+//     if(contador == "nocturna"){
+//         botonvehiculos();
+//     }
+//     if(contador == "vehiculos"){
+//         botonfaq();
+//     }
+//     if(contador == "faq"){
 
-    }
+//     }
+// });
+// hammertime = Hammer(element).on("dragright", function(event) {
+//     contador = $("#oculto").html();
+//     if(contador == "general"){
+
+//     }
+//     if(contador == "nocturna"){
+//         botongeneral();
+//     }
+//     if(contador == "vehiculos"){
+//         botonnocturna();
+//     }
+//     if(contador == "faq"){
+//         botonvehiculos();
+//     }
+// });
+
+
+element = document.getElementById('cuerpo');
+var direccion = "";
+Hammer(element).on("dragstart",function(event) {
+    direccion = event.gesture.direction;
 });
-hammertime = Hammer(element).on("dragright", function(event) {
+Hammer(element).on("dragend",function(event) {
     contador = $("#oculto").html();
-    if(contador == "general"){
-
+    switch (direccion) {
+        case "left":
+            if(contador == "general"){
+                botonnocturna();
+            }
+            if(contador == "nocturna"){
+                botonvehiculos();
+            }
+            if(contador == "vehiculos"){
+                botonfaq();
+            }
+            if(contador == "faq"){
+            } 
+        break;
+        case "right":
+            if(contador == "general"){
+            }
+            if(contador == "nocturna"){
+                botongeneral();
+            }
+            if(contador == "vehiculos"){
+                botonnocturna();
+            }
+            if(contador == "faq"){
+                botonvehiculos();
+            } 
+        break;
     }
-    if(contador == "nocturna"){
-        botongeneral();
-    }
-    if(contador == "vehiculos"){
-        botonnocturna();
-    }
-    if(contador == "faq"){
-        botonvehiculos();
-    }
+    direccion = "";
 });
