@@ -10,14 +10,16 @@ var app = {
         FastClick.attach(document.body);
         $(document).ready(function ()
 		{
-            //prueba 
+            //Estado que tiene por defecto la app al entrar. 
+			//Oculto los div "las paginas"
             $("#tablag").hide();
             $("#tablan").hide();
             $("#tablav").hide();
+			//Oculto los h2 de las fechas y media del día
 			$("#medianocturna").hide();
             $("#mediageneral").hide();
             $("#mediavehiculo").hide();
-
+			//Oculto las tablas
             $("#tablaGeneral").hide();
             $("#tablaNocturna").hide();
             $("#tablaVehiculos").hide();
@@ -109,6 +111,7 @@ function botonfaq() {
     $("#cargando").hide();
     $("#error").hide();
 };
+//Funcion mi fecha. Para tener la fecha en dd/mm/yyyy
 function mifecha() {
 	var meses, diasSemana, hoy, maniana, hora;
     meses = new Array ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
@@ -131,6 +134,7 @@ function mifecha() {
         }
     }
 };
+//Creo la tabla General
 function loadGeneral() {
     $.ajax(
     {
@@ -191,6 +195,7 @@ function loadGeneral() {
         }
     });
 };
+//Creo la tabla Nocturna
 function loadNocturna() {
     $.ajax(
     {

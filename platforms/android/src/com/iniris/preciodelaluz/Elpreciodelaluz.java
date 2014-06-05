@@ -28,7 +28,7 @@ import android.widget.LinearLayout;
 import com.google.ads.AdRequest;
 import com.google.ads.AdSize;
 import com.google.ads.AdView;
-//Añadido para mete publicidad phonegap
+//Aï¿½adido para mete publicidad phonegap
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.MapBuilder;
