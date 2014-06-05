@@ -10,6 +10,8 @@ var app = {
         FastClick.attach(document.body);
         $(document).ready(function ()
 		{
+             	
+        	
             //Estado que tiene por defecto la app al entrar. 
 			//Oculto los div "las paginas"
             $("#tablag").hide();

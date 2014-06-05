@@ -8,6 +8,8 @@
         <title>El Precio de la Luz</title>
         <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
         <script type="text/javascript" src="js/hammer.min.js"></script>
+        <script type="text/javascript" src="js/iscroll.js"></script>
+        
     </head>  
     <body>
         <div id="cabecera">
@@ -22,6 +24,8 @@
             </ul>
         </div>
         <div id="cuerpo">
+	<div id="wrapper">
+		<div id="scroller">
             <div id="cargando">
                 <div id="imagencargando">
                     <img src='img/loading.gif'/>
@@ -380,6 +384,8 @@
                 <input type="button" id="recargar" 
                 onclick="javascript:loadGeneral();loadNocturna();loadVehiculos();" value="Volver a cargar" />
             </div>
+		</div>
+	</div>		
         </div>
         <div id="oculto" hidden></div>
         <div id="log" hidden></div>
@@ -388,6 +394,7 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+		 
         </script>     
     </body>
 </html>
