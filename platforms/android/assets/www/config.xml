@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.iniris.preciodelaluz" version="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    
+    <name>El precio de la luz</name>
+    <description>
+       Consulta el precio de la luz. Obten todos los datos de la última subasta diaria. 
+    </description>
+    <author href="http://jedelwey.com" email="jedelweybusiness@gmail.com">
+        José David Durán Martos
+    </author>
+    
+    <!-- Preferencias -->
+    <preference name="permissions"                      value="none" />
+    <preference name="phonegap-version"                 value="3.5.0" />
+    <preference name="orientation"                      value="default" />
+    <preference name="target-device"                    value="universal" />
+    <preference name="fullscreen"                       value="true" />
+    <preference name="webviewbounce"                    value="true" />
+    <preference name="prerendered-icon"                 value="true" />
+    <preference name="stay-in-webview"                  value="false" />
+    <preference name="ios-statusbarstyle"               value="black-opaque" />
+    <preference name="detect-data-types"                value="true" />
+    <preference name="exit-on-suspend"                  value="false" />
+    <preference name="show-splash-screen-spinner"       value="true" />
+    <preference name="auto-hide-splash-screen"          value="true" />
+    <preference name="disable-cursor"                   value="false" />
+    <preference name="android-minSdkVersion"            value="7" />
+    <preference name="android-installLocation"          value="auto" />
+    
+    <!-- Plguins -->
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
+    <gap:plugin name="com.adobe.plugins.gaplugin" version="2.3.1" />
+    <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
+    <gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
+    <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
+    
+    
+    <!-- Iconos -->
+    <icon src="icono.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
+
+    <!-- Cross Domain White list-->
+    <access origin="*" />
+    <access origin="http://jedelwey.com/" />
+    <access origin="http://www.jedelwey.com/" />
+    <access origin="https://play.google.com/store/apps/developer?id=Jedelwey" />
+    <access origin="*.pushwoosh.com" />
+</widget>

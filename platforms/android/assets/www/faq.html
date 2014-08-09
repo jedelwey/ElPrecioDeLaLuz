@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>El precio de la luz</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <script src="phonegap.js"></script>
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="#">Jedelwey</a>
+            <ul>
+                <li><a href="index.html">General</a></li>
+                <li><a href="nocturna.html">Nocturna</a></li>
+                <li><a href="vehiculos.html">Vehículos</a></li>
+                <li class="menu-item-divided pure-menu-selected"><a href="faq.html">FAQ</a></li>
+                <li><a onclick="window.open('http://www.jedelwey.com', '_system', 'location=yes');">Mi Web</a></li>
+                <li><a onclick="window.open('https://play.google.com/store/apps/developer?id=Jedelwey', '_system', 'location=yes');">Otras App</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>El precio de la luz</h1>
+            <h2>Consulta a que hora está más barata la luz.</h2>
+        </div>
+
+        <div class="content">
+            <div align="center" id="imagen">
+                    <img align="center" src="./img/logo.png">
+                </div>
+                <h1><span>El precio de la luz</span></h1>
+                <p>
+				Pon esa lavadora que tenías pendiente, 1 o 2 horas más tarde, cuando el precio es más barato. Ajusta a que hora es mejor darte un baño o ducha si tienes el termo eléctrico. Configura tu lavavajillas para que funcione en las horas más baratas... 
+				</p>
+                <p>
+				Si sabes a que hora es más barata la luz y te ajustas a ella puedes ahorrar unos euros a final de mes. Y si lo complementas con un enchufe con temporizador podrás sacarle más partido a tus electrodomésticos.
+                </p>
+                <p>
+				Esta aplicación recoge los datos aportados por <a name="REE"><a href="#REE" onclick="window.open('http://www.esios.ree.es/web-publica/', '_system', 'location=yes');">Red Eléctrica de España</a></a> donde se pueden consultar los precios de las subastas diarias por cada tramo horario. Las subastas se realizan diariamente a entre las 20 y 21 horas, por lo que a las 21:00 horas tendrán disponible los precios del día siguiente.
+				</p>
+                <p>
+				Los datos que se recogen son los precios de las tarifas correspondientes al <b>Precio Voluntario Pequeño Consumidor (PVPC)</b> que sustituyen a la <b>Tarifa de Último Recurso (TUR)</b>. Estas tarifas son la <b>General</b>, <b>Nocturna</b> y <b>Vehículo Eléctrico</b>.
+				</p>
+                <p>
+				No quiero competir con el resto de aplicaciones en opciones, alarmas, widgets, etc... Simplemente mostrar los datos que la gente quiere saber de una forma, fácil y sencilla de entender para todo el mundo.
+				</p>
+                <p>
+				Si tienes cualquier duda o sugerencia sobre la aplicación no dudes en contactar conmigo por correo, en las reseñas de la app, o en <a name="Twitter"></a><a href="#Twitter" onclick = "window.open('https://twitter.com/jedelwey', '_system', 'location=yes');">mi twitter personal</a></a>.
+				</p>
+                <p>&nbsp;</p>
+     
+        </div>
+    </div>
+    <div class="footer l-box is-center">
+    <p align="center">Creado por <a name="copyright" href="#copyright" onclick="window.open('http://www.jedelwey.com', '_system', 'location=yes');">Jedelwey &reg;</a> Todos los derechos reservados.</p>
+</div>
+</div>
+<script src="js/ui.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>El precio de la luz</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <script src="phonegap.js"></script>
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="#">Jedelwey</a>
+            <ul>
+                <li><a href="index.html">General</a></li>
+                <li><a href="nocturna.html">Nocturna</a></li>
+                <li class="menu-item-divided pure-menu-selected"><a href="vehiculos.html">Vehículos</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a onclick="window.open('http://www.jedelwey.com', '_system', 'location=yes');">Mi Web</a></li>
+                <li><a onclick="window.open('https://play.google.com/store/apps/developer?id=Jedelwey', '_system', 'location=yes');">Otras App</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>El precio de la luz</h1>
+            <h2>Consulta a que hora está más barata la luz.</h2>
+        </div>
+
+        <div class="content">
+            <h2 align="center" class="content-subhead">Precios de hoy <span id="fecha"></span> para la Tarifa de Vehículos Eléctricos.</h2>
+        <table align="center" class="pure-table pure-table-striped is-center">
+              <thead>
+                <tr>
+               <td style="background-color:#1f8dd6;">Hora</td>
+               <td style="background-color:#1f8dd6;">Tarifa Vehículos</td>
+                </tr>
+              </thead>
+              <tbody>
+<tr>
+                  <td>0</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo0'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.06331</span> €</td>
+            </tr> 
+<tr>
+                  <td>1</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo1'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.05781</span> €</td>
+            </tr> 
+<tr>
+                  <td>2</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo2'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.05794</span> €</td>
+            </tr> 
+<tr>
+                  <td>3</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo3'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.05878</span> €</td>
+            </tr> 
+<tr>
+                  <td>4</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo4'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.05755</span> €</td>
+            </tr> 
+<tr>
+                  <td>5</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo5'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.05849</span> €</td>
+            </tr> 
+<tr>
+                  <td>6</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo6'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.05953</span> €</td>
+            </tr> 
+<tr>
+                  <td>7</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo7'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.06338</span> €</td>
+            </tr> 
+<tr>
+                  <td>8</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo8'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.06709</span> €</td>
+            </tr> 
+<tr>
+                  <td>9</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo9'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.07784</span> €</td>
+            </tr> 
+<tr>
+                  <td>10</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo10'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.07826</span> €</td>
+            </tr> 
+<tr>
+                  <td>11</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo11'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.07951</span> €</td>
+            </tr> 
+<tr>
+                  <td>12</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo12'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.07889</span> €</td>
+            </tr> 
+<tr>
+                  <td>13</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo13'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.14479</span> €</td>
+            </tr> 
+<tr>
+                  <td>14</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo14'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.14123</span> €</td>
+            </tr> 
+<tr>
+                  <td>15</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo15'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.13414</span> €</td>
+            </tr> 
+<tr>
+                  <td>16</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo16'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.13232</span> €</td>
+            </tr> 
+<tr>
+                  <td>17</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo17'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.13373</span> €</td>
+            </tr> 
+<tr>
+                  <td>18</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo18'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.13445</span> €</td>
+            </tr> 
+<tr>
+                  <td>19</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo19'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.13517</span> €</td>
+            </tr> 
+<tr>
+                  <td>20</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo20'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.13765</span> €</td>
+            </tr> 
+<tr>
+                  <td>21</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo21'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.15219</span> €</td>
+            </tr> 
+<tr>
+                  <td>22</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo22'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.1505</span> €</td>
+            </tr> 
+<tr>
+                  <td>23</td>
+                  <td><span  style='border-radius:25px' id='preciovehiculo23'>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<span>0.07297</span> €</td>
+            </tr> 
+        </tbody>
+        </table>    
+        </div>
+    </div>
+</div>
+<script src="js/ui.js"></script>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script>
+    $( document ).ready(function() {
+        //analytic("Vehiculos");
+        var url = "http://elpreciodelaluz.jedelwey.com/consulta.php"
+        var dt = new Date();
+        var dia = dt.getDate();
+        var mes = dt.getMonth()+1;
+        var ano = dt.getFullYear();
+        var fecha = ""+dia+"/"+mes+"/"+ano+""
+        $("#fecha").html(fecha);
+        $.ajax({ 
+            url:'http://elpreciodelaluz.jedelwey.com/consulta.php', 
+            type:'GET',
+            crossDomain : true,
+            dataType:'json',
+            error:function(jqXHR,text_status,strError)
+            { 
+                alert("No hay conexión de red");
+            }, 
+            success:function(data)
+            { 
+                var aux = 0;
+                var aux2= 0;
+                var aux3= 0;
+                $.each( data["Tarifa Nocturna"], function( key, value ) {
+                  if(key==0||key== 1||key==2||key==3||key==4||key==5||key==6||key==7)
+                  {
+                    $("#precionocturna"+value[0]).css("background-color","green");
+                  }
+                  if(key== 8||key==9||key==10||key==11||key==12||key==13||key==14||key==15)
+                  {
+                    $("#precionocturna"+value[0]).css("background-color","yellow");
+                  }
+                  if(key== 16||key==17||key==18||key==19||key==20||key==21||key==22||key==23)
+                  {
+                    $("#precionocturna"+value[0]).css("background-color","red");
+                  }
+                  aux++;
+                });
+                $.each( data["Tarifa General"], function( key, value ) {
+                  if(key==0||key== 1||key==2||key==3||key==4||key==5||key==6||key==7)
+                  {
+                    $("#preciogeneral"+value[0]).css("background-color","green");
+                  }
+                  if(key== 8||key==9||key==10||key==11||key==12||key==13||key==14||key==15)
+                  {
+                    $("#preciogeneral"+value[0]).css("background-color","yellow");
+                  }
+                  if(key== 16||key==17||key==18||key==19||key==20||key==21||key==22||key==23)
+                  {
+                    $("#preciogeneral"+value[0]).css("background-color","red");
+                  }
+                  aux2++;
+                });
+                $.each( data["Tarifa Vehiculos"], function( key, value ) {
+                  if(key==0||key== 1||key==2||key==3||key==4||key==5||key==6||key==7)
+                  {
+                    $("#preciovehiculo"+value[0]).css("background-color","green");
+                  }
+                  if(key== 8||key==9||key==10||key==11||key==12||key==13||key==14||key==15)
+                  {
+                    $("#preciovehiculo"+value[0]).css("background-color","yellow");
+                  }
+                  if(key== 16||key==17||key==18||key==19||key==20||key==21||key==22||key==23)
+                  {
+                    $("#preciovehiculo"+value[0]).css("background-color","red");
+                  }
+                  aux3++;
+                });
+            } 
+        }); 
+    });
+    </script>
+<div class="footer l-box is-center">
+    <p align="center">Creado por <a name="copyright" href="#copyright" onclick="window.open('http://www.jedelwey.com', '_system', 'location=yes');">Jedelwey &reg;</a> Todos los derechos reservados.</p>
+</div>
+</body>
+</html>
